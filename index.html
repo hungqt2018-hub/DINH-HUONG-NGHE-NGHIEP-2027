@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lớp Toán Thầy Hùng - Định hướng nghề nghiệp & Xếp 15 nguyện vọng 2027</title>
+    <meta name="description" content="Ứng dụng định hướng nghề nghiệp theo trắc nghiệm Holland và xếp 15 nguyện vọng tuyển sinh 2027 cho học sinh 2009 - Lớp Toán Thầy Hùng." />
+    <meta property="og:title" content="Lớp Toán Thầy Hùng - Định hướng nghề nghiệp & Xếp 15 nguyện vọng 2027" />
+    <meta property="og:description" content="Khám phá nhóm tính cách Holland, tra cứu ngành học, nhận tư vấn AI và sắp xếp 15 nguyện vọng tối ưu." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0f3d68" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Toán Thầy Hùng" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <script>
+      // Mock Vite internal HMR WebSocket client in preview environments where HMR is disabled
+      (function() {
+        var NativeWebSocket = window.WebSocket;
+        if (!NativeWebSocket) return;
+        function MockViteWebSocket(url, protocols) {
+          var isViteHmr = false;
+          if (protocols === 'vite-hmr') isViteHmr = true;
+          if (Array.isArray(protocols) && protocols.indexOf('vite-hmr') !== -1) isViteHmr = true;
+          if (typeof url === 'string' && (url.indexOf('token=') !== -1 || url.indexOf('vite-hmr') !== -1)) isViteHmr = true;
+
+          if (isViteHmr) {
+            var listeners = {};
+            return {
+              readyState: 1,
+              OPEN: 1,
+              CLOSED: 3,
+              CLOSING: 2,
+              CONNECTING: 0,
+              url: url,
+              protocol: 'vite-hmr',
+              addEventListener: function(event, callback) {
+                listeners[event] = listeners[event] || [];
+                listeners[event].push(callback);
+                if (event === 'open') {
+                  setTimeout(function() {
+                    try { callback({ type: 'open' }); } catch (e) {}
+                  }, 0);
+                }
+              },
+              removeEventListener: function(event, callback) {
+                if (listeners[event]) {
+                  listeners[event] = listeners[event].filter(function(cb) { return cb !== callback; });
+                }
+              },
+              dispatchEvent: function(event) {
+                var cbs = listeners[event && event.type] || [];
+                for (var i = 0; i < cbs.length; i++) {
+                  try { cbs[i](event); } catch (e) {}
+                }
+                return true;
+              },
+              send: function() {},
+              close: function() {
+                this.readyState = 3;
+                var closeCbs = listeners['close'] || [];
+                for (var j = 0; j < closeCbs.length; j++) {
+                  try { closeCbs[j]({ type: 'close', wasClean: true, code: 1000 }); } catch (e) {}
+                }
+              }
+            };
+          }
+          return new NativeWebSocket(url, protocols);
+        }
+        MockViteWebSocket.prototype = NativeWebSocket.prototype;
+        MockViteWebSocket.CONNECTING = 0;
+        MockViteWebSocket.OPEN = 1;
+        MockViteWebSocket.CLOSING = 2;
+        MockViteWebSocket.CLOSED = 3;
+        window.WebSocket = MockViteWebSocket;
+
+        window.addEventListener('error', function(event) {
+          if (event.message && (event.message.indexOf('WebSocket') !== -1 || event.message.indexOf('vite') !== -1)) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function(event) {
+          if (event.reason && String(event.reason).indexOf('WebSocket') !== -1) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+          }
+        }, true);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white dark:bg-slate-950 dark:text-slate-100 min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

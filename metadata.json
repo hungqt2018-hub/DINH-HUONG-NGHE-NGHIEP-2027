@@ -1,0 +1,6 @@
+{
+  "name": "Lớp Toán Thầy Hùng - Định hướng nghề nghiệp & Xếp 15 nguyện vọng 2027",
+  "description": "Ứng dụng định hướng nghề nghiệp theo trắc nghiệm Holland và hỗ trợ sắp xếp 15 nguyện vọng đại học năm 2027 dành cho học sinh 2009 của Lớp Toán Thầy Hùng.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

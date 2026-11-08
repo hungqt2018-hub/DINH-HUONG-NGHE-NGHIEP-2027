@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f3d68" />
+      <stop offset="50%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  
+  <!-- Subtle geometric grid/circle lines -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+  <circle cx="256" cy="256" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
+  <line x1="76" y1="256" x2="436" y2="256" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="4 4" />
+  <line x1="256" y1="76" x2="256" y2="436" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" stroke-dasharray="4 4" />
+
+  <!-- Math Symbol & Graduation Cap Motif -->
+  <g filter="url(#shadow)">
+    <!-- Sigma / Integral stylization -->
+    <path d="M160 150 L340 150 L260 256 L345 362 L160 362 L160 330 L285 330 L220 256 L285 182 L160 182 Z" fill="white" />
+    
+    <!-- Academic Cap Accent above -->
+    <path d="M256 95 L345 135 L256 175 L167 135 Z" fill="url(#goldGrad)" opacity="0.95" />
+    <path d="M345 135 L345 170 C345 175 340 180 335 180" stroke="#f59e0b" stroke-width="4" fill="none" />
+    <circle cx="335" cy="184" r="5" fill="#f59e0b" />
+  </g>
+  
+  <!-- Small Badge Text "LTH 2027" -->
+  <rect x="186" y="400" width="140" height="34" rx="17" fill="rgba(255,255,255,0.18)" backdrop-filter="blur(4px)" />
+  <text x="256" y="423" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="16" letter-spacing="2" text-anchor="middle">LTH • 2027</text>
+</svg>
